@@ -1,0 +1,14 @@
+%Prolog program to implement medical diagnosis
+%defining facts
+symptom(john,fever).
+symptom(john,cough).
+symptom(lina,headache).
+
+%defining rules
+has_flu(X):-
+    symptom(X,fever),
+    symptom(X,cough).
+has_cold(X):-
+    symptom(X,cough),
+    symptom(X,headache).
+
